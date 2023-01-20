@@ -1,8 +1,7 @@
-import { render } from "@testing-library/react";
 import { Component } from "react";
 import Genre from "./Genre";
 
-let genres = ['Acción', 'Animación', 'Aventura', 'Ciencia Ficción', 'Comedia','Documental', 'Drama', 'Fantasia', 'Infantiles', 'Musical']
+/* let genres = ['Acción', 'Animación', 'Aventura', 'Ciencia Ficción', 'Comedia','Documental', 'Drama', 'Fantasia', 'Infantiles', 'Musical'] */
 export default class GenresInDb extends Component {
 	constructor(){
 		super();
@@ -20,16 +19,20 @@ export default class GenresInDb extends Component {
 		})
 		.catch( e => console.log(e))
 	}
+
+	overTitle(){
+		document.querySelector("#card-body").classList.toggle('bg-secondary');
+	}
 	
     render(){
 	return (
-		<div class="col-lg-6 mb-4">
-			<div class="card shadow mb-4">
-				<div class="card-header py-3">
-					<h5 class="m-0 font-weight-bold text-gray-800">Genres in Data Base</h5>
+		<div className="col-lg-6 mb-4">
+			<div className="card shadow mb-4">
+				<div className="card-header py-3">
+					<h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={this.overTitle}>Genres in Data Base</h5>
 				</div>
-				<div class="card-body">
-					<div class="row">
+				<div className="card-body" id='card-body'>
+					<div className="row">
 						{this.state.genreList.map((genre, i)=> {
 							return <Genre {...genre} key={i}/>
 						})}
