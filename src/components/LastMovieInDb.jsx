@@ -1,4 +1,5 @@
-import mandalorian from '../assets/images/mandalorian.jpg'
+import mandalorian from '../assets/images/mandalorian.jpg';
+import React from "react";
 export default function LastMovieInDb(){
     return (
         <div className="col-lg-6 mb-4">

@@ -1,4 +1,5 @@
-import SmallCard from "./SmallCard"
+import SmallCard from "./SmallCard";
+import React from "react";
 
 
 export default function ContentRowMovies(props){

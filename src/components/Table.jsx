@@ -25,7 +25,7 @@ export default class Table extends Component {
     return (
       <table className="table">
         <TableHeader />
-        {this.state.moviesList.map((movie) => <TableContent {...movie} />)}
+        {this.state.moviesList.map((movie, i) => <TableContent {...movie} key={i}/>)}
         <TableHeader />
       </table>
     )

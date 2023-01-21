@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import Genre from "./Genre";
 
 /* let genres = ['Acción', 'Animación', 'Aventura', 'Ciencia Ficción', 'Comedia','Documental', 'Drama', 'Fantasia', 'Infantiles', 'Musical'] */

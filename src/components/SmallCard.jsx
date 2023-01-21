@@ -1,4 +1,4 @@
-
+import React from "react";
 export default function SmallCard (props){
     return (
         <div className="col-md-4 mb-4">
