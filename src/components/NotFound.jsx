@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Error() {
+function NotFound() {
   return (
     <>
      <h1>Oops! You seem to be lost.</h1>
@@ -11,4 +11,4 @@ function Error() {
   )
 }
 
-export default Error
+export default NotFound

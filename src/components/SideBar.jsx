@@ -6,7 +6,8 @@ import ContentWraper from "./ContentWraper";
 import GenresInDb from "./GenresInDb";
 import LastMovieInDb from "./LastMovieInDb";
 import ContentRowMovies from "./ContentRowMovies";
-import Error from "./Error";
+import NotFound from "./NotFound";
+import SearchMovies from "./SearchMovies";
 
 export default function SideBar(){
     let navItems = [{
@@ -29,6 +30,11 @@ export default function SideBar(){
         icon:'table',
         text:'Tables',
         link: 'contentRowMovies'
+        },{
+        style:'',
+        icon:'search',
+        text:'Search Movies',
+        link: 'searchMovies'
         }];
     return(
         <>
@@ -47,6 +53,7 @@ export default function SideBar(){
                 <NavItem {...navItems[1]} />
                 <NavItem {...navItems[2]} />
                 <NavItem {...navItems[3]} />
+                <NavItem {...navItems[4]} />
                 <hr className="sidebar-divider d-none d-md-block" />
             </ul>
             <Switch>
@@ -62,8 +69,11 @@ export default function SideBar(){
                 <Route exact path='/contentRowMovies'>
                     <ContentRowMovies />
                 </Route>
+                <Route exact path='/searchMovies'>
+                    <SearchMovies />
+                </Route>
                 <Route path='*'>
-                    <Error/>
+                    <NotFound/>
                 </Route>
             </Switch>
     </>
