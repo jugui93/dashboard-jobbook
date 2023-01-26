@@ -6,7 +6,7 @@ import React from "react";
 
 export default function ContentWraper(){
     return (
-        <div id="content-wrapper" className="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column">
             <TopBar/>
             <ContentRowTop/>
             <Footer/>
