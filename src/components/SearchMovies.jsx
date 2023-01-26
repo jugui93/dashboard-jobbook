@@ -12,7 +12,6 @@ function SearchMovies(){
         .then(response => response.json())
         .then( data => {
 			let response = data.Search || [];
-			console.log(response);
             setMovies(response)
         })
         .catch( error => console.error(error))
