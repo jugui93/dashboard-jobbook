@@ -10,7 +10,6 @@ function CategoriesInDb() {
         .then(response => response.json())
         .then( data => {
             let response = data.countByCategory;
-            console.log(response);
             setCategorias(response)
         })
         .catch( error => console.error(error))

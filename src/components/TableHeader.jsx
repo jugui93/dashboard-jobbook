@@ -4,9 +4,8 @@ export default function TableHeader() {
       <tr>
           <th>Id</th>
           <th>Título</th>
-          <th>Calificación</th>
-          <th>Premios</th>
-          <th>Duración</th>
+          <th>Descripción</th>
+          <th>Categoría</th>
       </tr>
   )
 }

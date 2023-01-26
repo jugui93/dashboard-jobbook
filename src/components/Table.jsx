@@ -1,34 +1,36 @@
 import TableContent from "./TableContent";
 import TableHeader from "./TableHeader";
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default class Table extends Component {
-  constructor(){
-    super();
-    this.state = {
-			moviesList: []
-		}
-  }
+export default function Table () {
+  const [servicios, setServicios] = useState([]);
 
-  componentDidMount(){
-    fetch('http://localhost:3031/api/movies')
+  useEffect (()=>{
+    fetch('http://localhost:3050/api/servicios')
 		.then(response => {
 			return response.json()
 		})
-		.then(movies => {
-			this.setState({moviesList: movies.data})
+		.then(data => {
+      let response = data.servicios;
+			setServicios(response)
 		})
 		.catch( e => console.log(e))
-  }
+  }, [])
   
-  render() {
+
     return (
       <table className="table">
-        <TableHeader />
-        {this.state.moviesList.map((movie, i) => <TableContent {...movie} key={i}/>)}
-        <TableHeader />
+        <thead>
+          <TableHeader />
+        </thead>
+        <tbody>
+          {servicios.map((movie, i) => <TableContent {...movie} key={i}/>)}
+        </tbody>
+        <tfoot>
+          <TableHeader />
+        </tfoot>
       </table>
     )
-  }
+  
 }
 

@@ -4,10 +4,9 @@ export default function TableContent(props) {
   return (
     <tr>
       <td>{props.id}</td>
-      <td>{props.title}</td>
-      <td>{props.rating}</td>
-      <td>{props.awards}</td>
-      <td>{props.length}</td>
+      <td>{props.titulo}</td>
+      <td>{props.descripcion}</td>
+      <td>{props.categoria.categoria}</td>
     </tr>
   )
 }

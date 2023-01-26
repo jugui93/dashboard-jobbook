@@ -1,6 +1,5 @@
 import ContentRowMovies from "./ContentRowMovies";
-import LastMovieInDb from "./LastMovieInDb";
-import Table from "./Table";
+import LastInDb from "./LastInDb";
 import React from "react";
 import CategoriesInDb from "./CategoriesInDb";
 
@@ -12,10 +11,10 @@ export default function ContentRowTop(){
             </div>
             <ContentRowMovies />
             <div className='row'>
-                <LastMovieInDb />
+                <LastInDb />
                 <CategoriesInDb />
             </div>
-            <Table/>
+
         </div>
     )
 }

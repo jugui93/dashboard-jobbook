@@ -2,11 +2,12 @@ import NavItem from "./NavItem";
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import ContentWraper from "./ContentWraper";
-import GenresInDb from "./GenresInDb";
-import LastMovieInDb from "./LastMovieInDb";
+import CategoriesInDb from "./CategoriesInDb";
+import LastInDb from "./LastInDb";
 import ContentRowMovies from "./ContentRowMovies";
 import NotFound from "./NotFound";
 import SearchMovies from "./SearchMovies";
+import Table from "./Table";
 
 export default function SideBar(){
     let navItems = [{
@@ -16,24 +17,24 @@ export default function SideBar(){
         link: ''
         },{
         style:'',
-        icon:'folder',
-        text:'Genres In Db',
-        link: 'genresInDb'
+        icon:'object-group',
+        text:'Categorias',
+        link: 'categoriesInDb'
         },{
         style:'',
         icon:'chart-area',
-        text:'Last Movie in DB',
-        link: 'lastMovieInDb'
+        text:'Ultimo usuario/servicio',
+        link: 'LastInDb'
         },{
         style:'',
         icon:'table',
-        text:'Tables',
+        text:'Tablas',
         link: 'contentRowMovies'
         },{
         style:'',
-        icon:'search',
-        text:'Search Movies',
-        link: 'searchMovies'
+        icon:'list',
+        text:'Todos los servicios',
+        link: 'services'
         }];
     return(
         <>
@@ -52,7 +53,7 @@ export default function SideBar(){
                 <hr className="sidebar-divider my-0" />
                 <NavItem {...navItems[0]} />
                 <hr className="sidebar-divider" />
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Opciones</div>
                 <NavItem {...navItems[1]} />
                 <NavItem {...navItems[2]} />
                 <NavItem {...navItems[3]} />
@@ -63,17 +64,17 @@ export default function SideBar(){
                 <Route exact path='/'>
                     <ContentWraper />
                 </Route>
-                <Route exact path='/genresInDb'>
-                    <GenresInDb />
+                <Route exact path='/categoriesInDb'>
+                    <CategoriesInDb />
                 </Route>
-                <Route exact path='/lastMovieInDb'>
-                    <LastMovieInDb />
+                <Route exact path='/LastInDb'>
+                    <LastInDb />
                 </Route>
                 <Route exact path='/contentRowMovies'>
                     <ContentRowMovies />
                 </Route>
-                <Route exact path='/searchMovies'>
-                    <SearchMovies />
+                <Route exact path='/services'>
+                    <Table />
                 </Route>
                 <Route path='*'>
                     <NotFound/>
