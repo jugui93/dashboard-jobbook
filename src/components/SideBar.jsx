@@ -1,5 +1,4 @@
 import NavItem from "./NavItem";
-import logoJB from "../assets/images/logo-jobbook.jpg";
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import ContentWraper from "./ContentWraper";
