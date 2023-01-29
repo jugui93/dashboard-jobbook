@@ -6,7 +6,6 @@ import CategoriesInDb from "./CategoriesInDb";
 import LastInDb from "./LastInDb";
 import ContentRowMovies from "./ContentRowMovies";
 import NotFound from "./NotFound";
-import SearchMovies from "./SearchMovies";
 import Table from "./Table";
 
 export default function SideBar(){
