@@ -1,4 +1,3 @@
-import mandalorian from '../assets/images/mandalorian.jpg';
 import React, { useState, useEffect } from "react";
 export default function LastInDb(){
     const [ultimoUsuario, setUltimoUsuario] = useState({});
@@ -32,7 +31,7 @@ export default function LastInDb(){
                     <h6 className="font-weight-bold">Titulo: {ultimoServicio.titulo} </h6>
                     <h6 className="font-weight-bold">Descripción: {ultimoServicio.descripcion} </h6>
 
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href={ultimoServicio.url}>View detail</a>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3050/servicio/${ultimoServicio.id}`}>View detail</a>
                 </div>
             </div>
             <div className="card shadow mb-4">
